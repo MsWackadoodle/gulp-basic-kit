@@ -3,6 +3,7 @@ var gulp = require('gulp'),
 	prefix = require('gulp-autoprefixer'),
 	sourcemaps = require('gulp-sourcemaps'),
 	concat = require('gulp-concat'),
+	livereload = require('gulp-livereload'),
 	plumber = require('gulp-plumber');
 
 gulp.task('css', function() {
@@ -13,7 +14,7 @@ gulp.task('css', function() {
 		   		   //dont use different files writing for the same block 
 		   		// rules may be unfortunately overwritten 
 		   		//just basically dont do dat
-		    	.pipe(concat('styles.css'))
+		    	.pipe(concat('styles.min.scss'))
 		    	.pipe(sourcemaps.init())
 		    	.pipe(sass(
 		   				{
@@ -30,4 +31,5 @@ gulp.task('css', function() {
 		   		))
 		    	.pipe(sourcemaps.write('./'))
 		    	.pipe(gulp.dest('./public/css'))
+		    	.pipe(livereload());
 });

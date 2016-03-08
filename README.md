@@ -8,6 +8,7 @@ In conclusion you might just ignore commentary lines
 
 ### Tools
 
+* Bootstrap-sass
 * Sass   
 * Handlebars
 
@@ -15,39 +16,52 @@ In conclusion you might just ignore commentary lines
 
 All the basics:
  
- IMGs:
+# IMGs:
 
- 	* Optimization
+* Optimization
 
- CSS:
+# HTML:
 	
-	* SCSS compilation
- 	* Autoprefixing
- 	* Src map
- 	* Mergin multiply files into one
+* Minification
 
- JS:
+# CSS:
 	
-	* Compressing
-	* Merging
+* SCSS compilation
+* Autoprefixing
+* Src map
+* Mergin multiply files into one
 
- Also there is sort of the catcher in the field of errors -- gulp.plumber;
+# JS:
+	
+* Compressing
+* Merging
 
-+++ json and lr tasks're coming up 
+# Other:
+
+* Livereload
+
+Also there is sort of the catcher in the field of errors -- gulp.plumber;
+
++++ json task's coming up 
+
 NOTE: image optimizer work just once as you start gulp
-	  I didnt get him to look for new files in directory
-	  YET 
+I didnt get him to look for new files in directory
+yet 
+
+## Additional: Bootstrap & Gulp note
+
+There is also a watch to `./node_modules/bootstrap-sass/assets/stylesheets` folder so every change applied there will be reflected in `./public/javasctipt/bootstrap.min.css`
+
 
 ### How to get this working
 
 1. check if node.js is installed
 2. conduct an installation if necessary
 3. clone this repo && get there 
-4. run in your console
-	npm install 
-   --it'll download the hell of the node modules
-5. run 
-	gulp
+4. run in your console ```npm install``` 
+   it'll download the hell of the node modules
+5. run your local or web-server ( personally I use the simplest solution -- http-server plugin you may install it by typing ```npm i -g http-server```
+6. run ```gulp```
 
 Thats all though you may want to change gulp tasks as you like them
 Im not entirely sure if this's gonna help somebody since I thought we do all prefer to personalize and stuff.

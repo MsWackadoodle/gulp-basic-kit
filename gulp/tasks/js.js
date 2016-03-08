@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
 	concat = require('gulp-concat'),
     plumber = require('gulp-plumber'),
+    livereload = require('gulp-livereload'),
     uglify = require('gulp-uglify');
 
 //concatenate all the .js files to the public one 
@@ -10,5 +11,6 @@ gulp.task('js', function() {
     		    .pipe(plumber())
     	    	.pipe(concat('finalcut.js'))
     	    	.pipe(uglify())
-    	    	.pipe(gulp.dest('./public/javascript'));
+    	    	.pipe(gulp.dest('./public/javascript'))
+    	    	.pipe(livereload());
 });
